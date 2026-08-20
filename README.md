@@ -288,7 +288,7 @@ The fields mean:
 The bit in position $t$ is 1 exactly when $t\in S$; equivalently,
 
 $$
-\operatorname{pivot\_mask}=\sum_{t\in S}2^t.
+\mathrm{pivot\_mask}=\sum_{t\in S}2^t.
 $$
 
 Thus `32641` encodes
