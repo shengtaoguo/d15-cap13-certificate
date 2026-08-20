@@ -8,7 +8,7 @@ This repository contains the exact certificate for the following result:
 The mathematical argument shows that certain flag functionals are
 nonnegative if every three-face has at least 14 facets. The certificate gives
 an exact positive linear combination of these functionals that equals
-\(-1\), modulo the generalized Dehn--Sommerville relations. This is the
+$-1$, modulo the generalized Dehn--Sommerville relations. This is the
 desired contradiction.
 
 ## Verification
@@ -66,11 +66,11 @@ $$
 1 + \sum_i \lambda_i L_i + \sum_j \mu_j D_j = 0.
 $$
 
-Here the \(L_i\) are valid nonnegative flag-functionals used in the proof,
-every \(\lambda_i\) is a strictly positive rational number, and the \(D_j\) are
+Here the $L_i$ are valid nonnegative flag-functionals used in the proof,
+every $\lambda_i$ is a strictly positive rational number, and the $D_j$ are
 generalized Dehn--Sommerville relations. The certificate contains 987 rows
-\(L_i\) and 13,667 nonzero coefficients \(\mu_j\). The checker reconstructs
-the identity in all \(2^{15}=32,768\) flag coordinates and verifies that
+$L_i$ and 13,667 nonzero coefficients $\mu_j$. The checker reconstructs
+the identity in all $2^{15}=32,768$ flag coordinates and verifies that
 every coordinate is exactly zero.
 
 To avoid repeating large rational denominators, the JSON file stores the
@@ -80,8 +80,8 @@ $$
 N + \sum_i a_i L_i + \sum_j b_j D_j = 0,
 $$
 
-where \(N>0\), \(\lambda_i=a_i/N\), and \(\mu_j=b_j/N\). Thus every \(a_i\)
-is strictly positive, while the \(b_j\) may have either sign. The checker
+where $N>0$, $\lambda_i=a_i/N$, and $\mu_j=b_j/N$. Thus every $a_i$
+is strictly positive, while the $b_j$ may have either sign. The checker
 uses only integer arithmetic.
 
 ## Certificate format
@@ -113,9 +113,9 @@ The top-level fields are:
 | `parameters.dimension` | The ambient polytope dimension, here 15. |
 | `parameters.face_dimension` | The dimension of the faces in the theorem, here 3. |
 | `parameters.minimum_facets` | The contradiction assumption: every three-face has at least 14 facets. |
-| `normalization` | The positive common denominator \(N\). It is stored as a 517-digit decimal string. |
-| `inequality_terms` | The 987 positive terms \(a_iL_i\). |
-| `dehn_sommerville_terms` | The 13,667 nonzero terms \(b_jD_j\). |
+| `normalization` | The positive common denominator $N$. It is stored as a 517-digit decimal string. |
+| `inequality_terms` | The 987 positive terms $a_iL_i$. |
+| `dehn_sommerville_terms` | The 13,667 nonzero terms $b_jD_j$. |
 
 The large integers are written as JSON strings rather than JSON numbers. This
 preserves them exactly in software whose numeric type cannot represent
@@ -123,7 +123,7 @@ preserves them exactly in software whose numeric type cannot represent
 
 ### Inequality terms
 
-An entry of `inequality_terms` represents one summand \(a_iL_i\):
+An entry of `inequality_terms` represents one summand $a_iL_i$:
 
 ```json
 {
@@ -146,19 +146,19 @@ The fields mean:
 | `row.anchor.family` | The family of the anchor inequality. |
 | `row.anchor.dimension` | The dimension of the anchor factor. |
 | `row.factors` | Stable names of the remaining factors, in convolution order. |
-| `coefficient` | The positive integer \(a_i=N\lambda_i\). |
+| `coefficient` | The positive integer $a_i=N\lambda_i$. |
 
-Writing \(r\) for `row.anchor.dimension`, the row types are:
+Writing $r$ for `row.anchor.dimension`, the row types are:
 
 | Row type or anchor family | Number | Allowed dimension | Starting inequality |
 | --- | ---: | ---: | --- |
 | unconditional | 748 | no anchor | The named `factors` describe the entire row. |
-| `CAP` | 123 | 3 | \(f_2(Q)-14\geq 0\): a three-face \(Q\) has at least 14 facets. |
-| `K4` | 38 | 4 | \(f_3(Q)-15\geq 0\): a four-face \(Q\) has at least 15 facets. |
-| `KUBT` | 61 | 5--15 | \(f_{r-1}(Q)-(r+19)\geq 0\): the higher-dimensional facet bounds. |
-| `V` | 17 | 3--15 | \(f_0(Q)-V_r\geq 0\): the vertex bound \(V_r\) computed by `bounds.py`. |
+| `CAP` | 123 | 3 | $f_2(Q)-14\geq 0$: a three-face $Q$ has at least 14 facets. |
+| `K4` | 38 | 4 | $f_3(Q)-15\geq 0$: a four-face $Q$ has at least 15 facets. |
+| `KUBT` | 61 | 5--15 | $f_{r-1}(Q)-(r+19)\geq 0$: the higher-dimensional facet bounds. |
+| `V` | 17 | 3--15 | $f_0(Q)-V_r\geq 0$: the vertex bound $V_r$ computed by `bounds.py`. |
 
-Here \(f_t(Q)\) is the number of \(t\)-dimensional faces of \(Q\). The
+Here $f_t(Q)$ is the number of $t$-dimensional faces of $Q$. The
 checker derives every constant in this table; the JSON does not store those
 constants separately. For the `V` family, the values for dimensions 3
 through 15 are
@@ -176,13 +176,13 @@ The naming conventions are:
 
 | Catalogue kind | Meaning |
 | --- | --- |
-| `g` | A coefficient functional of the toric \(g\)-polynomial. |
-| `gd` | The corresponding toric \(g\)-functional with face dimensions reversed. |
-| `be` | A simplex-minimal \(cd\)-coordinate functional. |
+| `g` | A coefficient functional of the toric $g$-polynomial. |
+| `gd` | The corresponding toric $g$-functional with face dimensions reversed. |
+| `be` | A simplex-minimal $cd$-coordinate functional. |
 | `bed` | The corresponding simplex-minimal functional with face dimensions reversed. |
 
 In a name such as `g1^4`, the superscript 4 is the factor dimension. Thus
-`g1^4` is the dimension-four toric \(g_1\)-functional, while `gd1^4` is its
+`g1^4` is the dimension-four toric $g_1$-functional, while `gd1^4` is its
 dual. Every name is unique across the complete dimension-0-through-15
 catalogue. The checker resolves the name and regenerates the factor's exact
 integer flag coordinates.
@@ -196,15 +196,15 @@ certificate identity.
 Order matters: the checker applies the factors from left to right in exactly
 the recorded order.
 
-If an unconditional row has \(m\) factors of dimensions
-\(d_1,\ldots,d_m\), its final dimension is
+If an unconditional row has $m$ factors of dimensions
+$d_1,\ldots,d_m$, its final dimension is
 
 $$
 d_1+\cdots+d_m+(m-1).
 $$
 
-If a conditional row has an anchor of dimension \(r\) followed by those
-\(m\) factors, its final dimension is
+If a conditional row has an anchor of dimension $r$ followed by those
+$m$ factors, its final dimension is
 
 $$
 r+d_1+\cdots+d_m+m.
@@ -216,12 +216,12 @@ For example, the complete dimension-two catalogue is:
 
 | Factor name | Flag-functional |
 | --- | --- |
-| `g0^2` | \(1\) |
-| `g1^2` | \(f_0-3\) |
-| `gd1^2` | \(f_1-3\) |
+| `g0^2` | $1$ |
+| `g1^2` | $f_0-3$ |
+| `gd1^2` | $f_1-3$ |
 
 Thus the name `g1^2` directly selects the nonnegative polygon functional
-\(g_1^2=f_0-3\).
+$g_1^2=f_0-3$.
 
 For a complete example, consider the following row descriptor from the
 certificate:
@@ -240,19 +240,19 @@ The entries resolve as follows:
 
 | JSON data | Selected factor |
 | --- | --- |
-| `"family": "V", "dimension": 3` | The anchor \(f_0-9\). |
-| `"g1^2"` | \(g_1^2=f_0-3\). |
-| `"g1^2"` | A second copy of \(g_1^2=f_0-3\). |
-| `"g1^4"` | \(g_1^4=f_0-5\). |
-| `"g0^0"` | \(g_0^0=1\). |
+| `"family": "V", "dimension": 3` | The anchor $f_0-9$. |
+| `"g1^2"` | $g_1^2=f_0-3$. |
+| `"g1^2"` | A second copy of $g_1^2=f_0-3$. |
+| `"g1^4"` | $g_1^4=f_0-5$. |
+| `"g0^0"` | $g_0^0=1$. |
 
-Writing \(\star\) for convolution, the checker constructs
+Writing $\star$ for convolution, the checker constructs
 
 $$
 L_i=(f_0-9)\star(f_0-3)\star(f_0-3)\star(f_0-5)\star 1.
 $$
 
-Each occurrence of \(f_0\) belongs to its own factor dimension. This row has
+Each occurrence of $f_0$ belongs to its own factor dimension. This row has
 dimension
 
 $$
@@ -261,15 +261,15 @@ $$
 
 where the final 4 counts the four convolutions.
 
-The optional anchor and the ordered `factors` uniquely determine \(L_i\).
+The optional anchor and the ordered `factors` uniquely determine $L_i$.
 
 ### Dehn--Sommerville terms
 
-For a subset \(S\subseteq\{0,\ldots,14\}\), let \(f_S\) be the flag number
+For a subset $S\subseteq\{0,\ldots,14\}$, let $f_S$ be the flag number
 that counts chains of proper faces whose dimensions are exactly the elements
-of \(S\). The 32,768 flag coordinates are indexed by these subsets.
+of $S$. The 32,768 flag coordinates are indexed by these subsets.
 
-An entry of `dehn_sommerville_terms` represents one summand \(b_jD_j\):
+An entry of `dehn_sommerville_terms` represents one summand $b_jD_j$:
 
 ```json
 {
@@ -282,17 +282,17 @@ The fields mean:
 
 | Field | Meaning |
 | --- | --- |
-| `pivot_mask` | A bit mask encoding the leading flag coordinate of \(D_j\). |
-| `coefficient` | The nonzero integer \(b_j=N\mu_j\), which may have either sign. |
+| `pivot_mask` | A bit mask encoding the leading flag coordinate of $D_j$. |
+| `coefficient` | The nonzero integer $b_j=N\mu_j$, which may have either sign. |
 
-The bit in position \(t\) is 1 exactly when \(t\in S\); equivalently,
+The bit in position $t$ is 1 exactly when $t\in S$; equivalently,
 
 $$
 \operatorname{pivot\_mask}=\sum_{t\in S}2^t.
 $$
 
 Thus `32641` encodes
-\(S=\{0,7,8,9,10,11,12,13,14\}\). For this pivot the checker reconstructs
+$S=\{0,7,8,9,10,11,12,13,14\}$. For this pivot the checker reconstructs
 
 $$
 D_j=f_{\{0,7,8,9,10,11,12,13,14\}}
@@ -315,7 +315,7 @@ to prove them. It reconstructs every recorded row and then verifies:
 1. the schema, parameters, primitive normalization, and certificate file hash;
 2. the formulas for all conditional facet and vertex bounds;
 3. the convolution order and dimension of every row;
-4. the strict positivity of all 987 integer coefficients \(a_i\);
+4. the strict positivity of all 987 integer coefficients $a_i$;
 5. zero residual in the 987 degree-15 `cd`-coordinates;
 6. zero residual in all 32,768 original flag coordinates.
 
