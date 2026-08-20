@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "repository_type": "certificate-only-companion",
+  "title": "Exact certificate for the dimension-15 thirteen-facet theorem",
+  "claims": [
+    {
+      "id": "CLAIM-CAP13",
+      "statement": "Every convex polytope of dimension at least 15 has a three-face with at most 13 facets.",
+      "logical_role": "The paper combines its human proofs of row nonnegativity with the exact certificate identity.",
+      "artifacts": [
+        "CERT-D15-CAP13"
+      ]
+    },
+    {
+      "id": "CLAIM-EXACT-IDENTITY",
+      "statement": "The recorded positive combination of 987 admissible rows equals minus the normalization functional modulo the generalized Dehn--Sommerville relations.",
+      "logical_role": "The certificate supplies compact row reconstruction data and a primitive integer form of every exact multiplier.",
+      "artifacts": [
+        "CERT-D15-CAP13"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "CERT-D15-CAP13",
+      "path": "artifacts/certificates/d15-cap13-certificate.json",
+      "sha256": "695ef9af1b23a325b01186b7d9492448b41d9ef2a06a4fe9af5f7767000b5ff4",
+      "role": "Primitive integer certificate containing named factor rows, positive inequality coefficients, and the generalized Dehn--Sommerville lift.",
+      "claims": [
+        "CLAIM-CAP13",
+        "CLAIM-EXACT-IDENTITY"
+      ],
+      "producer": {
+        "provenance": "Losslessly schema-translated and primitively normalized from the certificate exported by external run R20260719-CSK3-T56-Q14-CERT-EXPORT-049 (source SHA-256 787d8ba49c1b30617f114cd8a7cbaa683a4d042c318aa4100a3a3c0d223f97d2): rational multipliers were converted to common-denominator integer coefficients, legacy factor addresses were replaced by stable names resolving to the same catalogue entries, and discovery-only metadata was omitted. The historical discovery pipeline is not included."
+      },
+      "verifier": {
+        "cwd": ".",
+        "command": [
+          "python3",
+          "verification/verify.py"
+        ],
+        "expected_exit": 0,
+        "expected_output_prefix": "VERIFIED:",
+        "inputs": [
+          "artifacts/certificates/d15-cap13-certificate.json",
+          "verification/verify.py",
+          "verification/verify_certificate.py",
+          "verification/flag_arithmetic.py",
+          "verification/bounds.py"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "description": "Python 3.10 or newer using only the standard library; single-process verification with expected memory below 2 GiB; no TeX installation required."
+  },
+  "verification_report": "verification/verification-report.json",
+  "checksum_inventory": "SHA256SUMS",
+  "license": "No separate license is asserted; see README.md."
+}

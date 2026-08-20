@@ -1,0 +1,107 @@
+{
+  "arithmetic_sha256": "90085e0362ee1e616b3f7a2ccb90334611ec64faaa5e968f61db309a173a13c9",
+  "bounds_sha256": "b9257e519faeffaa1ccbb4c542aae95e53b1ed0be1e0732006db07129d016076",
+  "cap": 13,
+  "certificate_sha256": "695ef9af1b23a325b01186b7d9492448b41d9ef2a06a4fe9af5f7767000b5ff4",
+  "checker_sha256": "f2b706493cd27407a1ca774b3c425183fbbd8bacf3aac05053a498d3ce75d22f",
+  "checks": {
+    "all_anchor_formulas_rederived": true,
+    "all_convolution_dimensions_valid": true,
+    "all_ds_rows_match_declared_formula": true,
+    "all_multipliers_strictly_positive": true,
+    "closed_factor_catalogue": true,
+    "floating_point_used": false,
+    "optimizer_modules_imported": false,
+    "original_coordinate_residual_zero": true,
+    "primitive_integer_normalization": true,
+    "quotient_residual_zero": true
+  },
+  "dehn_sommerville_rows": 13667,
+  "dimension": 15,
+  "elapsed_seconds": 10.216789372265339,
+  "factor_occurrences": {
+    "simplex-minimal-cd": 79,
+    "simplex-minimal-cd-dual": 20,
+    "toric-g": 3746,
+    "toric-g-dual": 538
+  },
+  "family_census": {
+    "CAP:r3": 123,
+    "K4:r4": 38,
+    "KUBT:r10": 4,
+    "KUBT:r11": 3,
+    "KUBT:r12": 1,
+    "KUBT:r13": 1,
+    "KUBT:r14": 1,
+    "KUBT:r15": 1,
+    "KUBT:r5": 13,
+    "KUBT:r6": 12,
+    "KUBT:r7": 11,
+    "KUBT:r8": 8,
+    "KUBT:r9": 6,
+    "V:r12": 1,
+    "V:r3": 11,
+    "V:r4": 2,
+    "V:r6": 1,
+    "V:r7": 2,
+    "unconditional": 748
+  },
+  "inequality_rows": 987,
+  "integer_normalization_digits": 517,
+  "mutation_tests": {
+    "mutations": [
+      {
+        "name": "wrong dimension",
+        "status": "REJECTED"
+      },
+      {
+        "name": "wrong threshold",
+        "status": "REJECTED"
+      },
+      {
+        "name": "zero normalization",
+        "status": "REJECTED"
+      },
+      {
+        "name": "negative inequality coefficient",
+        "status": "REJECTED"
+      },
+      {
+        "name": "duplicate DS pivot",
+        "status": "REJECTED"
+      },
+      {
+        "name": "unknown factor name",
+        "status": "REJECTED"
+      },
+      {
+        "name": "unknown row family",
+        "status": "REJECTED"
+      },
+      {
+        "name": "zero DS coefficient",
+        "status": "REJECTED"
+      }
+    ],
+    "rejected": 8,
+    "status": "PASS"
+  },
+  "nonzero_dehn_sommerville_multipliers": 13667,
+  "original_flag_coordinates": 32768,
+  "q": 14,
+  "quotient_coordinates": 987,
+  "schema": "d15-cap13-independent-validity-check-v2",
+  "self_tests": {
+    "cd_extractor_pairs": 714,
+    "convolution_basis_pairs": 147,
+    "covered_through_degree": 7,
+    "duality_rows": 112,
+    "exhaustive_through_degree": 7,
+    "t56_anchor_cd_rows": 26,
+    "toric_g_coordinate_checks": 187,
+    "toric_g_rows": 20
+  },
+  "status": "VERIFIED",
+  "strictly_positive_inequality_multipliers": 987,
+  "unique_suffix_factors": 110
+}
