@@ -151,7 +151,7 @@ The fields mean:
 Writing $r$ for `row.anchor.dimension`, the row types are:
 
 | Row type or anchor family | Number | Allowed dimension | Starting inequality |
-| :---: | :---: | :---: | --- |
+| --- | --- | --- | --- |
 | unconditional | 748 | no anchor | The named `factors` describe the entire row. |
 | CAP | 123 | 3 | $f_2(Q)-14\geq 0$: a three-face $Q$ has at least 14 facets. |
 | K4 | 38 | 4 | $f_3(Q)-15\geq 0$: a four-face $Q$ has at least 15 facets. |
