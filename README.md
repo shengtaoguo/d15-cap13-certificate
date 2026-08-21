@@ -153,10 +153,10 @@ Writing $r$ for `row.anchor.dimension`, the row types are:
 | Row type or anchor family | Number | Allowed dimension | Starting inequality |
 | :---: | :---: | :---: | --- |
 | unconditional | 748 | no anchor | The named `factors` describe the entire row. |
-| `CAP` | 123 | 3 | $f_2(Q)-14\geq 0$: a three-face $Q$ has at least 14 facets. |
-| `K4` | 38 | 4 | $f_3(Q)-15\geq 0$: a four-face $Q$ has at least 15 facets. |
-| `KUBT` | 61 | 5--15 | $f_{r-1}(Q)-(r+19)\geq 0$: the higher-dimensional facet bounds. |
-| `V` | 17 | 3--15 | $f_0(Q)-V_r\geq 0$: the vertex bound $V_r$ computed by `bounds.py`. |
+| CAP | 123 | 3 | $f_2(Q)-14\geq 0$: a three-face $Q$ has at least 14 facets. |
+| K4 | 38 | 4 | $f_3(Q)-15\geq 0$: a four-face $Q$ has at least 15 facets. |
+| KUBT | 61 | 5--15 | $f_{r-1}(Q)-(r+19)\geq 0$: the higher-dimensional facet bounds. |
+| V | 17 | 3--15 | $f_0(Q)-V_r\geq 0$: the vertex bound $V_r$ computed by `bounds.py`. |
 
 Here $f_t(Q)$ is the number of $t$-dimensional faces of $Q$. The
 checker derives every constant in this table; the JSON does not store those
