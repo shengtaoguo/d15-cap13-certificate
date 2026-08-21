@@ -109,13 +109,13 @@ The top-level fields are:
 
 | Field | Meaning |
 | --- | --- |
-| `schema` | The version of the certificate format. |
-| `parameters.dimension` | The ambient polytope dimension, here 15. |
-| `parameters.face_dimension` | The dimension of the faces in the theorem, here 3. |
-| `parameters.minimum_facets` | The contradiction assumption: every three-face has at least 14 facets. |
-| `normalization` | The positive common denominator $N$. It is stored as a 517-digit decimal string. |
-| `inequality_terms` | The 987 positive terms $a_iL_i$. |
-| `dehn_sommerville_terms` | The 13,667 nonzero terms $b_jD_j$. |
+| **schema** | The version of the certificate format. |
+| **parameters.dimension** | The ambient polytope dimension, here 15. |
+| **parameters.face_dimension** | The dimension of the faces in the theorem, here 3. |
+| **parameters.minimum_facets** | The contradiction assumption: every three-face has at least 14 facets. |
+| **normalization** | The positive common denominator $N$. It is stored as a 517-digit decimal string. |
+| **inequality_terms** | The 987 positive terms $a_iL_i$. |
+| **dehn_sommerville_terms** | The 13,667 nonzero terms $b_jD_j$. |
 
 The large integers are written as JSON strings rather than JSON numbers. This
 preserves them exactly in software whose numeric type cannot represent
