@@ -1,4 +1,5 @@
 # Preserve the byte-exact files whose SHA-256 digests are checked.
+* -text
 artifacts/certificates/d15-cap13-certificate.json -text
 verification/verify_certificate.py -text
 verification/flag_arithmetic.py -text
