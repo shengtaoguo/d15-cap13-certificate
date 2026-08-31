@@ -55,6 +55,5 @@
     "description": "Python 3.10 or newer using only the standard library; single-process verification with expected memory below 2 GiB; no TeX installation required."
   },
   "verification_report": "verification/verification-report.json",
-  "checksum_inventory": "SHA256SUMS",
-  "license": "No separate license is asserted; see README.md."
+  "checksum_inventory": "SHA256SUMS"
 }
