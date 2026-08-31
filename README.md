@@ -265,7 +265,7 @@ The optional anchor and the ordered `factors` uniquely determine $L_i$.
 
 ### Dehn--Sommerville terms
 
-For a subset $S\subseteq\{0,\ldots,14\}$, let $f_S$ be the flag number
+For a subset $S\subseteq\lbrace 0,\ldots,14\rbrace$, let $f_S$ be the flag number
 that counts chains of proper faces whose dimensions are exactly the elements
 of $S$. The 32,768 flag coordinates are indexed by these subsets.
 
@@ -292,11 +292,11 @@ $$
 $$
 
 Thus `32641` encodes
-$S=\{0,7,8,9,10,11,12,13,14\}$. For this pivot the checker reconstructs
+$S=\lbrace 0,7,8,9,10,11,12,13,14\rbrace$. For this pivot the checker reconstructs
 
 $$
-D_j=f_{\{0,7,8,9,10,11,12,13,14\}}
-    -2f_{\{0,7,8,9,10,11,12,13\}}.
+D_j=f_{\lbrace 0,7,8,9,10,11,12,13,14\rbrace}
+    -2f_{\lbrace 0,7,8,9,10,11,12,13\rbrace}.
 $$
 
 The `pivot_mask` is therefore not an arbitrary identifier and does not store
