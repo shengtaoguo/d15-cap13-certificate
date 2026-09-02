@@ -11,6 +11,12 @@ an exact positive linear combination of these functionals that equals
 $-1$, modulo the generalized Dehn--Sommerville relations. This is the
 desired contradiction.
 
+## Paper
+
+This certificate accompanies [*On Unavoidable Faces of High-Dimensional
+Polytopes*](https://arxiv.org/abs/2609.00397) by Jesús A. De Loera, Ethan X.
+Fang, Shengtao Guo, Junwei Lu, and Hailun Zheng (arXiv:2609.00397).
+
 ## Verification
 
 Python 3.10 or newer is sufficient; no external package is needed. Verification
